@@ -1,0 +1,14 @@
+.vscode
+
+.git
+.gitignore
+README.md
+
+*Dockerfile*
+*docker-compose*
+.dockerignore
+
+node_modules
+
+dist
+ecosystem.dev.config.js
