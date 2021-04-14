@@ -34,3 +34,5 @@ lib-cov
 *.log
 *.out
 *.pid
+*.tar
+*.tar.gz

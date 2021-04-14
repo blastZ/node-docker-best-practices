@@ -7,7 +7,8 @@
     "start": "pm2 start ecosystem.config.js",
     "dev": "pm2 start ecosystem.dev.config.js && pm2 logs nico-app --raw",
     "tsc-watch": "tsc -w",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "./build.sh"
   },
   "author": "blastz",
   "license": "MIT",
