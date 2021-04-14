@@ -33,6 +33,7 @@ FROM base as production
 COPY --from=build /usr/src/app/dist ./dist
 COPY ecosystem.config.js ./
 
-USER node
-
-CMD ["pm2-runtime", "--raw", "ecosystem.config.js", "--env", "${APP_ENV}"]
+# https://docs.docker.com/engine/reference/builder/#cmd
+# Json array format will run command without a shell, sometimes it will cause env value not work
+# CMD ["pm2-runtime", "--raw", "ecosystem.config.js", "--env", "${APP_ENV}"]
+CMD pm2-runtime --raw ecosystem.config.js --env ${APP_ENV}
