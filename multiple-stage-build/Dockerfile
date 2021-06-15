@@ -1,5 +1,5 @@
 # stage 1 - base
-FROM node:14-alpine as base
+FROM node:14-alpine AS base
 
 EXPOSE 1314
 
@@ -16,7 +16,7 @@ RUN npm config set registry=https://registry.npm.taobao.org \
 
 # stage 2 - developement
 
-FROM base as dev
+FROM base AS dev
 
 ENV NODE_ENV = developement
 
@@ -28,7 +28,7 @@ CMD ["node", "app.js", "--inspect=localhost:9229"]
 
 # stage 3 - production
 
-FROM base as pro
+FROM base AS pro
 
 COPY . .
 
