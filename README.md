@@ -7,6 +7,8 @@ This repo is created for collect node docker best practices.
 Check the time after content to confirm It's up to date.
 
 - common
+  - docker (2021-07)
+    - .dockerignore
   - pm2 (2021-06)
     - ecosystem.config.js
   - shell (2021-06)
